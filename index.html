@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Settings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="phone">
+    <!-- Status Bar -->
+    <div class="status-bar">
+      <span class="status-time">9:41</span>
+      <div class="status-icons">
+        <svg class="icon-signal" viewBox="0 0 18 12" fill="currentColor"><rect x="0" y="8" width="3" height="4" rx="0.5"/><rect x="5" y="5" width="3" height="7" rx="0.5"/><rect x="10" y="2" width="3" height="10" rx="0.5"/><rect x="15" y="0" width="3" height="12" rx="0.5"/></svg>
+        <svg class="icon-wifi" viewBox="0 0 16 12" fill="currentColor"><path d="M8 12a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM3.5 8.5a6.5 6.5 0 019 0l1.2-1.2a8 8 0 00-11.4 0l1.2 1.2zM0.5 5.5a11 11 0 0115 0l1.2-1.2a12.5 12.5 0 00-17.4 0l1.2 1.2z"/></svg>
+        <svg class="icon-battery" viewBox="0 0 27 13" fill="currentColor"><rect x="0.5" y="0.5" width="22" height="12" rx="2.5" stroke="currentColor" fill="none"/><rect x="2" y="2" width="18" height="9" rx="1.5"/><path d="M24 4.5v4a1.5 1.5 0 000-4z"/></svg>
+      </div>
+    </div>
+
+    <!-- Screen 1: Settings -->
+    <div id="screen-settings" class="screen active">
+      <header class="nav-header">
+        <button class="nav-back" aria-label="Back">
+          <svg viewBox="0 0 10 18" fill="none"><path d="M9 1L1 9l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <h1 class="nav-title">Settings</h1>
+      </header>
+
+      <main class="content">
+        <section class="section">
+          <h2 class="section-label">Account</h2>
+          <div class="card">
+            <button class="row row-profile" type="button">
+              <img class="avatar" src="https://api.dicebear.com/7.x/adventurer/svg?seed=John" alt="John Doe">
+              <div class="profile-info">
+                <span class="profile-name">John Doe</span>
+                <span class="profile-email">johndoe@gmail.com</span>
+              </div>
+              <svg class="chevron" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="divider"></div>
+            <button class="row" type="button">
+              <span class="row-label">Manage Account</span>
+              <svg class="chevron" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-label">Preferences</h2>
+          <div class="card">
+            <div class="row row-toggle">
+              <div class="toggle-content">
+                <span class="row-label">Reveal your IQ</span>
+                <p class="row-description">
+                  Only shown to people with an official player profile on
+                  <a href="https://wsop.com/player-search/" target="_blank" rel="noopener">wsop.com/player-search/</a>
+                </p>
+              </div>
+              <label class="toggle">
+                <input type="checkbox" id="toggle-iq" checked>
+                <span class="toggle-track"></span>
+              </label>
+            </div>
+            <div class="divider"></div>
+            <button class="row" type="button" data-nav="preferences">
+              <span class="row-label">Preferences</span>
+              <svg class="chevron" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="divider"></div>
+            <button class="row" type="button">
+              <span class="row-label">Notifications</span>
+              <svg class="chevron" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="divider"></div>
+            <button class="row" type="button">
+              <span class="row-label">Support &amp; Legal</span>
+              <svg class="chevron" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </section>
+
+        <button class="btn-logout" type="button">Log out</button>
+      </main>
+    </div>
+
+    <!-- Screen 2: Preferences -->
+    <div id="screen-preferences" class="screen">
+      <header class="nav-header">
+        <button class="nav-back" aria-label="Back" data-nav="settings">
+          <svg viewBox="0 0 10 18" fill="none"><path d="M9 1L1 9l8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <h1 class="nav-title">Preferences</h1>
+      </header>
+
+      <main class="content">
+        <div class="card">
+          <button class="row" type="button">
+            <span class="row-label">Language</span>
+            <span class="row-value">
+              English
+              <svg class="chevron" viewBox="0 0 8 14" fill="none"><path d="M1 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+          <div class="divider"></div>
+          <div class="row row-toggle-compact">
+            <span class="row-label">Sounds</span>
+            <label class="toggle">
+              <input type="checkbox" id="toggle-sounds" checked>
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+          <div class="divider"></div>
+          <div class="row row-toggle-compact">
+            <span class="row-label">Vibrations</span>
+            <label class="toggle">
+              <input type="checkbox" id="toggle-vibrations">
+              <span class="toggle-track"></span>
+            </label>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div class="home-indicator"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
